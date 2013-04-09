@@ -56,9 +56,11 @@ var Lingo = function() {
     }); 
     reportLooper(function(lang, count) {
       content += '<tr><td>' + lang + '</td>' +
-          '<td>' + boxify(count, total) + '</td></tr>';
+          '<td>' + boxify(count, total) + '</td>' +
+          '<td>' + count + '</td></tr>';
     });
-    content += '<tr><td>Total</td><td>' + boxify(total, total) + '</td></tr>';
+    content += '<tr><td>Total</td><td>' + boxify(total, total) + 
+        '</td><td>' + total + '</td></tr>';
     content += '</table>';
 
     fs.writeFile(filename, content);
